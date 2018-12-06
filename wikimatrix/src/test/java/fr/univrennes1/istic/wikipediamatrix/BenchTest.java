@@ -8,6 +8,9 @@ import java.io.FileReader;
 
 import org.junit.Test;
 
+/*
+ * Welcome in hell
+ * */
 public class BenchTest {
 	
 	/*
