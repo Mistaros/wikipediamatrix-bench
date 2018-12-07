@@ -33,9 +33,19 @@ public class App
 //		
 //		
 		
-		String url = "https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l%27ordre_du_Pok%C3%A9dex_National";
-		Pageweb test=new Pageweb(url);
-		test.toCSV(";");
+		//String url = "Comparison_of_Canon_EOS_digital_cameras";
+		String url = "Comparison_between_Esperanto_and_Ido";
+		
+		Pageweb test=new Pageweb(url,true);
+		//test.toCSV(";");
+		System.out.println("prie");
+		System.out.println(test.tableaux.size());
+		EcrireCSV.ecrireTables(test);
+		
+		
+		
+		
+		
 		
 		
 	}
