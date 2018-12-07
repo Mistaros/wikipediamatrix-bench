@@ -24,7 +24,7 @@ public class Pageweb {
 			effectiveUrl = url;		
 		}
 
-		if (ValiderUrl.estValide(effectiveUrl)) {
+		if (ValiderUrl.valide(effectiveUrl)) {
 			this.url=effectiveUrl;
 			this.tableaux = new ArrayList<Table>();
 			System.out.println(this.url);
@@ -42,6 +42,7 @@ public class Pageweb {
 			}
 		} else {
 			System.out.println("page/url non valide chef!");
+			this.tableaux=new ArrayList<Table>();
 		}
 	}
 

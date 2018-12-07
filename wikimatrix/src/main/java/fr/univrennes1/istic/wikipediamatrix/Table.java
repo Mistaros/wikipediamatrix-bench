@@ -29,7 +29,14 @@ public class Table {
 		/* initialisation variable*/
 		Elements lignes = tableau.select("tr");
 		for(int i =1; i<lignes.size();i++) {
-			Observation temp = new Observation(lignes.get(i).select("td"));
+			
+			//Observation temp = new Observation(lignes.get(i).select("td"));
+			
+			Elements liste= lignes.get(i).select("th");
+			liste.addAll(lignes.get(i).select("td"));
+			Observation temp = new Observation(liste);
+			
+			
 			if(temp.observation.size()!=0) {
 				observations.add(temp);
 			}
