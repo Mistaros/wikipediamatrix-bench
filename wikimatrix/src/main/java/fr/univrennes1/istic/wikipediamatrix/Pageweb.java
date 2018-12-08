@@ -38,7 +38,11 @@ public class Pageweb {
 
 			for(int i =0; i<listeTableau.size();i++) {
 				Table temp = new Table("Titre", listeTableau.get(i));
-				this.tableaux.add(temp);
+
+				/*ici test de validiter*/
+				if (ValiderTable.validerTableau(temp)) {
+					this.tableaux.add(temp);
+				}
 			}
 		} else {
 			System.out.println("page/url non valide chef!");
@@ -47,11 +51,9 @@ public class Pageweb {
 	}
 
 
-	
-	
-	
-	
-	
+
+
+
 	/*Fonction pour csv perso*/
 	public void  toCSV(String sep) {
 		String str = new String();

@@ -18,7 +18,7 @@ public class App
 		System.out.println( "Hello World!" );
 
 		//		/* test */
-		//		String url ="https://fr.wikipedia.org/wiki/Liste_des_Pok%C3%A9mon_de_Pok%C3%A9mon_Rouge_et_Bleu";
+		//		String url ="https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l'ordre_du_Pok%C3%A9dex_National";
 		//		//String url ="https://en.wikipedia.org/wiki/Comparison_of_Canon_EOS_digital_cameras";
 		//		Document doc = Jsoup.connect(url).get();
 		//		System.out.println(doc.title());
@@ -43,17 +43,23 @@ public class App
 		//System.out.println("prie");
 		//System.out.println(test.tableaux.size());
 		//EcrireCSV.ecrireTables(test);
-
-		Scanner scanner=new Scanner(new File("inputdata/wikiurls.txt"));
-		while (scanner.hasNextLine()) {
-			String nom = scanner.nextLine();
-			Pageweb temp = new Pageweb(nom,true);
-			if (temp.tableaux.size()!=0 ) {
-				EcrireCSV.ecrireTables(temp);
-			}
-
-		}
-		scanner.close();
+//
+		
+		/* test page pokemon */
+		String url ="https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l'ordre_du_Pok%C3%A9dex_National";
+		Pageweb test=new Pageweb(url,false);
+		EcrireCSV.ecrireTables(test);
+		
+//		Scanner scanner=new Scanner(new File("inputdata/wikiurls.txt"));
+//		while (scanner.hasNextLine()) {
+//			String nom = scanner.nextLine();
+//			Pageweb temp = new Pageweb(nom,true);
+//			if (temp.tableaux.size()!=0 ) {
+//				EcrireCSV.ecrireTables(temp);
+//			}
+//
+//		}
+//		scanner.close();
 
 
 
