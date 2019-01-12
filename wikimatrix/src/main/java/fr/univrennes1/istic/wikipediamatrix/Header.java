@@ -23,6 +23,13 @@ public class Header {
 	
 	
 	
+	public Header() {
+		// constructeur vide pour test
+	}
+
+
+
+
 	/* Fonction pour csv perso*/
 	public String toCSV(String sep) {
 		String str = new String();
