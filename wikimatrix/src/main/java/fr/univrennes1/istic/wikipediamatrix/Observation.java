@@ -19,10 +19,14 @@ public class Observation {
 		}
 		this.nb_variable=observation.size();
 	}
+	
+	
+	public Observation() {
+		// constructeur vide pour test
+	}
 
-	
-	
-	
+
+
 	/* Fonction pour csv perso*/
 	public String toCSV(String sep) {
 		String str = new String();

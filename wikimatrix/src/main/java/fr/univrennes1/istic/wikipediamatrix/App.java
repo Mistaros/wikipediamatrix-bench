@@ -46,20 +46,20 @@ public class App
 //
 		
 		/* test page pokemon */
-		String url ="https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l'ordre_du_Pok%C3%A9dex_National";
-		Pageweb test=new Pageweb(url,false);
-		EcrireCSV.ecrireTables(test);
+//		String url ="https://www.pokepedia.fr/Liste_des_Pok%C3%A9mon_dans_l'ordre_du_Pok%C3%A9dex_National";
+//		Pageweb test=new Pageweb(url,false);
+//		EcrireCSV.ecrireTables(test);
 		
-//		Scanner scanner=new Scanner(new File("inputdata/wikiurls.txt"));
-//		while (scanner.hasNextLine()) {
-//			String nom = scanner.nextLine();
-//			Pageweb temp = new Pageweb(nom,true);
-//			if (temp.tableaux.size()!=0 ) {
-//				EcrireCSV.ecrireTables(temp);
-//			}
-//
-//		}
-//		scanner.close();
+		Scanner scanner=new Scanner(new File("inputdata/wikiurls.txt"));
+		while (scanner.hasNextLine()) {
+			String nom = scanner.nextLine();
+			Pageweb temp = new Pageweb(nom,true);
+			if (temp.tableaux.size()!=0 ) {
+				EcrireCSV.ecrireTables(temp);
+			}
+
+		}
+		scanner.close();
 
 
 

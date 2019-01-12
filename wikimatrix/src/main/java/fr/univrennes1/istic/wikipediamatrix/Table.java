@@ -46,6 +46,12 @@ public class Table {
 
 
 
+	public Table() {
+		// constructeur vide pour test
+	}
+
+
+
 
 	/* Fonction pour csv perso*/
 	public String toCSV(String sep) {
@@ -59,14 +65,14 @@ public class Table {
 	}
 
 	/* Verif*/
-	public void Test() {
-		for (int i=0; i<this.observations.size(); i++) {
-			if(this.nom_variable.nb_variable == this.observations.get(i).nb_variable) {
-				System.out.println("TRUE");
-			} else {
-				System.out.println("FALSE");
-			}
-		}
-	}
+//	public void Test() {
+//		for (int i=0; i<this.observations.size(); i++) {
+//			if(this.nom_variable.nb_variable == this.observations.get(i).nb_variable) {
+//				System.out.println("TRUE");
+//			} else {
+//				System.out.println("FALSE");
+//			}
+//		}
+//	}
 
 }
