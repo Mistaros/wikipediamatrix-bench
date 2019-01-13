@@ -1,19 +1,54 @@
 # Wikipedia Matrix (benchmark)
 
-Extracting Wikipedia tables into CSV files (basic skeleton for testing/benchmarking solutions). Once the git is cloned:
-```
-cd wikimatrix 
-mvn test
-``` 
+# Principe du projet :
 
-We give 300+ Wikipedia URLs and the challenge is to:
- * integrate the extractors' code (HTML and Wikitext)
- * extract as many relevant tables as possible 
- * serialize the results into CSV files (within `output/html` and `output/wikitext`) 
+On souhaite extraire les tableaux de plus 300 pages wikipédia. Pour se faire nous devons construire un extracteur de page an JAVA.
+Cet extrateur devra tout automatiser afin de réaliser cette tâche.
 
-Pour lancer le programme il suffit de lancer la fonction main se trouvant App.java.
+# Exécution du programme 
 
-Il récupére les tableaux wikitable et les tableaux ayant l'option sortable.
+Pour pouvoir exécuter ce programme vous devez posséder un éditeur de texte java style Ecclipse ainsi qu'un JEE.
+
+Une fois ceci fait, il vous suffit d'exécuter la classe App.java contenant la fonction main qui réalisera alors la tâche.
+
+# dependencies
+
+Un certains nombre de dependances ont été rajoutées. Il est donc nécessaire de mettre à jour le pom.xml avec les nouvelles dépendances.
+
+<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<!-- jsoup HTML parser library @ https://jsoup.org/ -->
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.11.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.6</version>
+		</dependency>
+	</dependencies>
+
+
+# entrée
+
+Le fichier des noms d'entrée wikiurls.txt se trouve dans wikimatrix/inputdata.
+
+# sortie
+
+Les sorties se trouve dans le dossier wikimatrix/output/html au format .csv.
+
+# console
+
+Pendant l'exécution du programme, vous pouvez suivre dans la console, l'évolution de l'extraction.
+Vous y trouverez la page en cours de traitement, si la page a été trouvé, si l'url est valide, et si la page a été écrite ou non.
+
 
 License libre de droit opensource.
 
