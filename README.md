@@ -10,9 +10,6 @@ We give 300+ Wikipedia URLs and the challenge is to:
  * integrate the extractors' code (HTML and Wikitext)
  * extract as many relevant tables as possible 
  * serialize the results into CSV files (within `output/html` and `output/wikitext`) 
- 
-More details can be found in `BenchTest.java`. We are expecting to launch `mvn test` and the results will be in `output` folder 
-
 
 Pour lancer le programme il suffit de lancer la fonction main se trouvant App.java.
 
