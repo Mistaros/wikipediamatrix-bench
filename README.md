@@ -12,3 +12,12 @@ We give 300+ Wikipedia URLs and the challenge is to:
  * serialize the results into CSV files (within `output/html` and `output/wikitext`) 
  
 More details can be found in `BenchTest.java`. We are expecting to launch `mvn test` and the results will be in `output` folder 
+
+
+Pour lancer le programme il suffit de lancer la fonction main se trouvant App.java.
+
+Il récupére les tableaux wikitable et les tableaux ayant l'option sortable.
+
+License libre de droit opensource.
+
+Joaquim Morais
